@@ -2,7 +2,11 @@
 <html>
 
 <head>
+<<<<<<< Updated upstream
     <title><?php if(@$title)  { echo $title;?> <?php } else {?>Home Page Page<?php }?></title>
+=======
+    <title><?php if(@$title)  { echo $title;?> <?php } else {?>Home Page <?php }?></title>
+>>>>>>> Stashed changes
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -20,11 +24,29 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     <?php if(@$_GET['module'] == 'users' && @$_GET['action'] == 'login') { ?>
         <link rel="stylesheet" href="assets/frontend/css/login.css" />
     <?php } elseif(@$_GET['module'] == 'aboutus' && @$_GET['action'] == 'details') {?>
         <link rel="stylesheet" href="assets/frontend/css/about.css" />
+<<<<<<< Updated upstream
+=======
+    <?php } elseif(@$_GET['module'] == 'department' && @$_GET['action'] == 'details') {?>
+        <link rel="stylesheet" href="assets/frontend/css/department.css" />    
+    <?php } elseif(@$_GET['module'] == 'gallery' && @$_GET['action'] == 'details') {?>
+        <link rel="stylesheet" href="assets/frontend/css/gallery.css" />    
+    <?php } elseif(@$_GET['module'] == 'registration' && @$_GET['action'] == 'details') {?>
+        <link rel="stylesheet" href="assets/frontend/css/registration.css"/>  
+    <?php } elseif(@$_GET['module'] == 'contact' && @$_GET['action'] == 'contact') {?>
+        <link rel="stylesheet" href="assets/frontend/css/contact.css"/> 
+    <?php } elseif(@$_GET['module'] == 'studentcorner' && @$_GET['action'] == 'details') {?>
+        <link rel="stylesheet" href="assets/frontend/css/studentcorner.css"/>  
+    <?php } elseif(@$_GET['module'] == 'placement' && @$_GET['action'] == 'placement') {?>
+        <link rel="stylesheet" href="assets/frontend/css/place.css"/>  
+>>>>>>> Stashed changes
     <?php } else {?>
      <link rel="stylesheet" href="assets/frontend/css/index.css" />
     <?php } ?>
@@ -59,7 +81,11 @@
         </header>
         <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
             <div class="container">
+<<<<<<< Updated upstream
                 <a class="navbar-brand" href="index.html" style="text-transform: uppercase;"> FREE COLLEGE</a>
+=======
+                <a class="navbar-brand" href="?" style="text-transform: uppercase;"> FREE COLLEGE</a>
+>>>>>>> Stashed changes
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -77,6 +103,7 @@
                         </li>
 
                         <li class="nav-item">
+<<<<<<< Updated upstream
                             <a class="nav-link" href="studentcorner.html">Student Corner</a>
                         </li>
 
@@ -92,12 +119,34 @@
                             <a class="nav-link" href="gallery.html">Gallery</a>
                         </li>
                     <?php if(isLoggedIn()) { ?>
+=======
+                            <a class="nav-link" href="index.php?module=studentcorner&action=details">Student Corner</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?module=department&action=details">Department</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?module=placement&action=placement">Placement</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?module=gallery&action=details">Gallery</a>
+                        </li>
+
+                        <?php if(isLoggedIn()) { ?>
+>>>>>>> Stashed changes
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?module=users&action=logout">Logout</a>
                         </li>
 
                         <li class="nav-item">
+<<<<<<< Updated upstream
                             <a class="nav-link" href="index.php?admin=show&module=dashboard&action=index">Admin Panel</a>
+=======
+                        <a class="nav-link" href="index.php?admin=show&module=dashboard&action=index">Admin Panel</a>
+>>>>>>> Stashed changes
                         </li>
                     <?php } else { ?>
                         <li class="nav-item">
@@ -105,12 +154,21 @@
                         </li>
 
                         <li class="nav-item">
+<<<<<<< Updated upstream
                             <a class="nav-link" href="registration.html">Registration</a>
                         </li>
                     <?php } ?>
 
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
+=======
+                            <a class="nav-link" href="index.php?module=registration&action=details">Registration</a>
+                        </li>
+                        <?php } ?>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?module=contact&action=contact">Contact</a>
+>>>>>>> Stashed changes
                         </li>
                     </ul>
                 </div>

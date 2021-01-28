@@ -12,6 +12,7 @@
             </button>
         </div>
     </div>
+<<<<<<< Updated upstream
 
     <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
 
@@ -19,6 +20,16 @@
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
+=======
+    <link href="assets/css/user-details-view.css" rel="stylesheet">
+    
+    <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
+<div class="container">
+    <h2>Details View</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+        <thead>
+>>>>>>> Stashed changes
             <tr>
                 <th>Username</th>
                 <td><?php echo $user_details['user_name'];?></td>
@@ -38,6 +49,7 @@
                 <td><?php echo $user_details['first_name'];?></td>
                 <th>Last Name</th>
                 <td><?php echo $user_details['last_name'];?></td>
+<<<<<<< Updated upstream
             </tr>
 
             <tr>
@@ -45,6 +57,17 @@
                 <td><?php echo $user_details['mobile'];?></td>
                 <th>Email</th>
                 <td><?php echo $user_details['email'];?></td>
+=======
+                
+            </tr>
+
+            <tr>
+            <th>Mobile</th>
+                <td><?php echo $user_details['mobile'];?></td>
+                <th>Email</th>
+                <td><?php echo $user_details['email'];?></td>
+                
+>>>>>>> Stashed changes
             </tr>
 
             <tr>
@@ -71,7 +94,13 @@
             </thead>
 
         </table>
+<<<<<<< Updated upstream
         <a href="?admin=show&module=users&action=edit&record=<?php echo $user_details['id'];?>">Edit</a>
         <a href="javascript:window.history.back();">Back</a>
+=======
+        <a class="btn default btn-sm" href="?admin=show&module=users&action=edit&record=<?php echo $user_details['id'];?>">Edit</a>
+        <a class="btn info btn-sm" href="javascript:window.history.back();">Back</a>
+    </div>
+>>>>>>> Stashed changes
     </div>
 </main>

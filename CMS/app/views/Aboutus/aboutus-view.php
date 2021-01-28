@@ -7,7 +7,11 @@
         <div id="centered">
             <h1>About Us</h1>
         </div>
+<<<<<<< Updated upstream
         <div class="centered"><a href="index.html">Home<span><a href="about.html">/About</a></span></a></div>
+=======
+        <div class="centered"><a href="?">Home<span><a href="index.php?module=aboutus&action=details">/About</a></span></a></div>
+>>>>>>> Stashed changes
     </div>
 </section>
 

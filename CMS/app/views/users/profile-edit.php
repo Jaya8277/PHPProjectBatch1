@@ -15,7 +15,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -32,25 +32,21 @@
         }
 
        
-       
-        
+
+      
         .form-control{
             border-radius: 25px;
 
         }
        
-            .form-select{
+        .form-select{
             border-radius: 25px;
   
         }
-        .form{
+        .needs-validation{
           padding-left:20%;
         }
-        .input-group-text
-        {
-            border-radius: 25px;
 
-        }
         .btn {
     border: 2px solid black;
     background-color: white;
@@ -60,13 +56,13 @@
   }
   
  /* Blue */
-.info {
-    border-color: #2196F3;
-    color: dodgerblue
+.dark {
+    border-color: black;
+    color: black
   }
   
-  .info:hover {
-    background: #2196F3;
+  .dark:hover {
+    background: black;
     color: white;
   }
     </style>
@@ -83,19 +79,26 @@
         <div class="py-5 text-center">
             <img class="d-block mx-auto mb-4" src="assets/images/brand/bootstrap-logo.svg" alt="" width="72"
                  height="57">
-            <h2 >Registration form</h2>
+            <h2>My Edit Profile</h2>
             <p class="lead"></p>
         </div>
-        
-        <div class="form row g-3">
+
+        <div class="row g-3">
             <div class="col-md-7 col-lg-8">
+            <form class="needs-validation" novalidate action="?module=users&action=profile" method="post" enctype="multipart/form-data">
                 <h4 class="mb-3">Student Details</h4>
-                <form class="needs-validation" novalidate action="?module=users&action=register" method="post">
+                    <div class="col-12">
+                        <label for="user_name" class="form-label">Username</label>
+                        <div class="input-group">
+                                <input class="form-control" name="user name"
+                                    value="   <?php echo $profile_details['user_name']; ?>">
+                            </div>
+                    </div>
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="first_name" class="form-label">First name</label>
-                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Enter your First Name"
-                                   value="" required maxlength="10">
+                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder=""
+                                   value="<?php echo $profile_details['first_name']; ?>" required maxlength="10">
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -104,41 +107,17 @@
 
                         <div class="col-sm-6">
                             <label for="last_name" class="form-label">Last name</label>
-                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter your Last Name"
-                                   value="" required>
+                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder=""
+                                   value="<?php echo $profile_details['last_name']; ?>" required>
                             <div class="invalid-feedback">
                                 Valid last name is required.
                             </div>
                         </div>
 
                         <div class="col-12">
-                            <label for="user_name" class="form-label">Username</label>
-                            <div class="input-group">
-                                <span class="input-group-text">@</span>
-                                <input type="text" class="form-control" name="user_name" id="user_name"
-                                       placeholder="user_name" required>
-                                <div class="invalid-feedback">
-                                    Your username is required.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <label for="password" class="form-label">Password</label>
-                            <div class="input-group">
-                                <span class="input-group-text">@</span>
-                                <input type="password" class="form-control" name="password" id="password"
-                                       placeholder="password" required>
-                                <div class="invalid-feedback">
-                                    Your password is required.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
                             <label for="email" class="form-label">Email <span class="text-muted"></span></label>
                             <input type="email" class="form-control" name="email" id="email"
-                                   placeholder="you@example.com">
+                                   placeholder="you@example.com" value="<?php echo $profile_details['email']; ?>">
                             <div class="invalid-feedback">
                                 Please enter a valid email address.
                             </div>
@@ -147,7 +126,7 @@
                         <div class="col-12">
                             <label for="address" class="form-label">Address</label>
                             <input type="text" class="form-control" name="address" id="address"
-                                   placeholder="1234 Main St">
+                                   placeholder="1234 Main St" value="<?php echo $profile_details['address']; ?>">
                             <div class="invalid-feedback">
                                 Please enter your address.
                             </div>
@@ -156,37 +135,57 @@
                         <div class="col-12">
                             <label for="Mobile" class="form-label">Mobile <span class="text-muted"></span></label>
                             <input type="number" class="form-control" name="mobile" id="mobile"
-                                   placeholder="mobile number">
+                                   placeholder="mobile number" value="<?php echo $profile_details['mobile']; ?>">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="profile_photo" class="form-label">Profile Photo</label>
+                            <input type="file" class="form-control" name="profile_photo" id="profile_photo" placeholder="Profile Photo">
                         </div>
 
                         <div class="col-md-5">
-                            <label for="country" class="form-label">Country</label>
-                            <select class="form-select" name="country" id="country">
-                                <option value="">Choose</option>
-                                <option value="india">india</option>
-                                <option value="japan">japan</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select a valid country.
+                                <label for="country" readonly class="form-label">Country</label>
+                                <select class="form-select" name="country" id="country">
+                                    <option value="">Choose</option>
+                                    <option value="india" <?php
+                                     if($profile_details["country"]=='india'){
+                                         echo "selected";
+                                     }
+                                     ?>>india</option>
+                                    <option value="japan" <?php
+                                     if($profile_details["country"]=='japan'){
+                                         echo "selected";
+                                     }
+                                     ?>>japan</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid country.
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-4">
-                            <label for="state" class="form-label">State</label>
-                            <select class="form-select" name="state" id="state">
-                                <option value="">Choose...</option>
-                                <option value="up">up</option>
-                                <option value="mp">mp</option>
+                            <div class="col-md-4">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-select" name="state" id="state">
+                                    <option value="">Choose...</option>
+                                    <option value="up" <?php
+                                     if($profile_details["state"] =='up'){
+                                         echo "selected";
+                                     }
+                                     ?>>up</option>
+                                    <option value="mp" <?php
+                                     if($profile_details["state"] =='mp'){
+                                         echo "selected";
+                                     }
+                                     ?>>mp</option>
 
-                            </select>
-                            <div class="invalid-feedback">
-                                Please provide a valid state.
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please provide a valid state.
+                                </div>
                             </div>
-                        </div>
-
                         <div class="col-md-3">
                             <label for="zip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" name="zip" id="zip" placeholder="">
+                            <input type="text" class="form-control" name="zip" id="zip" placeholder="" value="<?php echo $profile_details['zip']; ?>">
                             <div class="invalid-feedback">
                                 Zip code required.
                             </div>
@@ -211,14 +210,19 @@
                     <h4 class="mb-3">gender</h4>
 
                     <div class="my-3">
-                        <div class="form-check">
-                            <input id="gender" name="gender" type="radio" value="male" class="form-check-input">
-                            <label class="form-check-label" for="credit">male</label>
-                        </div>
-                        <div class="form-check">
-                            <input id="gender" name="gender" type="radio" value="female" class="form-check-input">
-                            <label class="form-check-label" for="debit">female</label>
-                        </div>
+                            <div class="form-check">
+                                <input id="gender" name="gender" type="radio" class="form-check-input" value="male" <?php if($profile_details["gender"]=='male'){
+                                    echo "checked";
+                                }
+                                 ?> <label class="form-check-label" for="credit">male</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="gender" name="gender" class="form-check-input" type="radio" value="female" <?php if ($profile_details["gender"]=='female')
+                                {
+                                    echo "Checked";
+                                }
+                                ?> <label class="form-check-label" for="debit">female</label>
+                            </div>
                         <!-- <div class="form-check">
                             <input id="paypal" name="paymentMethod" type="radio" class="form-check-input">
                             <label class="form-check-label" for="paypal">PayPal</label>
@@ -263,9 +267,8 @@
 
                     <hr class="my-4">
 
-                    <button class="w-100 btn btn-primary btn-lg" type="submit" name="submit"
-                            value="register">Register</button><br><br>
-                    <a class="btn info" href="?module=users&action=login">Login</a>
+                    <button class="w-100 btn dark btn-lg" type="submit" name="submit"
+                            value="register">Update Profile</button>
                 </form>
             </div>
         </div>

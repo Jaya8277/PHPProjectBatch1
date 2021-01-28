@@ -22,6 +22,7 @@ if($admin === 'show') { // Backend
         $action = 'set'.$ctrl.$action;
     }
     $action($method, $action); // call method
+<<<<<<< Updated upstream
 } else { // Frontend
     if(empty($module) || empty($action)) { // Is module value is blank or action value is blank of query string
         include_once("app/views/layouts/default-view.php");
@@ -37,5 +38,15 @@ if($admin === 'show') { // Backend
             register($method, $action);
         }*/
     }
+=======
+}else{ // Frontend
+
+if(empty($module) || empty($action)) { // Is module value is blank or action value is blank of query string
+    include_once("app/views/layouts/default-view.php");
+}else{
+    require_once("app/controllers/$module/$ctrl.php");  // Dynamic Approach
+    $action($method, $action);  // dynamic
+}
+>>>>>>> Stashed changes
 }
 ?>

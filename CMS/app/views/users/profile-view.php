@@ -30,6 +30,44 @@
                 font-size: 3.5rem;
             }
         }
+<<<<<<< Updated upstream
+=======
+
+
+      
+
+        .form-control{
+            border-radius: 25px;
+
+        }
+       
+        .form-select{
+            border-radius: 25px;
+  
+        }
+        .needs-validation{
+          padding-left:20%;
+        }
+
+        .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+ /* Blue */
+.dark {
+    border-color: black;
+    color: black
+  }
+  
+  .dark:hover {
+    background: black;
+    color: white;
+  }
+>>>>>>> Stashed changes
     </style>
 
 
@@ -44,12 +82,17 @@
         <div class="py-5 text-center">
             <img class="d-block mx-auto mb-4" src="assets/images/brand/bootstrap-logo.svg" alt="" width="72"
                  height="57">
+<<<<<<< Updated upstream
             <h2>My Profile Details</h2>
+=======
+            <h2 >My Profile Details</h2>
+>>>>>>> Stashed changes
             <p class="lead"></p>
         </div>
 
         <div class="row g-3">
             <div class="col-md-7 col-lg-8">
+<<<<<<< Updated upstream
                 <h4 class="mb-3">Student Details</h4>
                 <form class="needs-validation" novalidate action="?module=users&action=profile" method="post">
                     <div class="col-12">
@@ -57,16 +100,42 @@
                         <div class="input-group">
                             <?php echo $profile_details['user_name']; ?>
                         </div>
+=======
+            <form class="needs-validation" novalidate action="?module=users&action=profile" method="post">
+                <h4 class="mb-3">Student Details</h4>
+                    <div class="col-12">
+                        <label for="user_name" class="form-label">Username</label>
+                        <div class="input-group">
+                                <input class="form-control" name="user name"
+                                    value="   <?php echo $profile_details['user_name']; ?>">
+                            </div>
+>>>>>>> Stashed changes
                     </div>
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="first_name" class="form-label">First name</label>
+<<<<<<< Updated upstream
                             <?php echo $profile_details['first_name']; ?>
+=======
+                            <div class="input-group">
+                                <input class="form-control" name="user name"
+                                    value="<?php echo $profile_details['first_name']; ?>">
+
+                            </div>
+>>>>>>> Stashed changes
                         </div>
 
                         <div class="col-sm-6">
                             <label for="last_name" class="form-label">Last name</label>
+<<<<<<< Updated upstream
                             <?php echo $profile_details['last_name']; ?>
+=======
+                            <div class="input-group">
+                                <input class="form-control" name="user name"
+                                    value="<?php echo $profile_details['last_name']; ?>">
+
+                            </div>
+>>>>>>> Stashed changes
                         </div>
 
                         <div class="col-12">
@@ -94,6 +163,7 @@
                         </div>
 
                         <div class="col-md-5">
+<<<<<<< Updated upstream
                             <label for="country" class="form-label">Country</label>
                             <select class="form-select" name="country" id="country">
                                 <option value="">Choose</option>
@@ -121,6 +191,51 @@
                         <div class="col-md-3">
                             <label for="zip" class="form-label">Zip</label>
                             <input type="text" class="form-control" name="zip" id="zip" placeholder="">
+=======
+                                <label for="country" readonly class="form-label">Country</label>
+                                <select class="form-select" name="country" id="country">
+                                    <option value="">Choose</option>
+                                    <option value="india" <?php
+                                     if($profile_details["country"]=='india'){
+                                         echo "selected";
+                                     }
+                                     ?>>india</option>
+                                    <option value="japan" <?php
+                                     if($profile_details["country"]=='japan'){
+                                         echo "selected";
+                                     }
+                                     ?>>japan</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid country.
+                                </div>
+                            </div>
+
+                        <div class="col-md-4">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-select" name="state" id="state">
+                                    <option value="">Choose...</option>
+                                    <option value="up" <?php
+                                     if($profile_details["state"] =='up'){
+                                         echo "selected";
+                                     }
+                                     ?>>up</option>
+                                    <option value="mp" <?php
+                                     if($profile_details["state"] =='mp'){
+                                         echo "selected";
+                                     }
+                                     ?>>mp</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please provide a valid state.
+                                </div>
+                            </div>
+
+                        <div class="col-md-3">
+                            <label for="zip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" name="zip" id="zip" placeholder="" value="<?php echo $profile_details['zip']; ?>">
+>>>>>>> Stashed changes
                             <div class="invalid-feedback">
                                 Zip code required.
                             </div>
@@ -143,6 +258,7 @@
                     <hr class="my-4">
 
                     <h4 class="mb-3">gender</h4>
+<<<<<<< Updated upstream
 
                     <div class="my-3">
                         <div class="form-check">
@@ -153,6 +269,22 @@
                             <input id="gender" name="gender" type="radio" value="female" class="form-check-input">
                             <label class="form-check-label" for="debit">female</label>
                         </div>
+=======
+                    <div class="my-3">
+                            <div class="form-check">
+                                <input id="gender" name="gender" type="radio" class="form-check-input" value="male" <?php if($profile_details["gender"]=='male'){
+                                    echo "checked";
+                                }
+                                 ?> <label class="form-check-label" for="credit">male</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="gender" name="gender" class="form-check-input" type="radio" value="female" <?php if ($profile_details["gender"]=='female')
+                                {
+                                    echo "Checked";
+                                }
+                                ?> <label class="form-check-label" for="debit">female</label>
+                            </div>
+>>>>>>> Stashed changes
                         <!-- <div class="form-check">
                             <input id="paypal" name="paymentMethod" type="radio" class="form-check-input">
                             <label class="form-check-label" for="paypal">PayPal</label>
@@ -168,7 +300,10 @@
                                 Name on card is required
                             </div>
                         </div>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                          <div class="col-md-6">
                             <label for="cc-number" class="form-label">Credit card number</label>
                             <input type="text" class="form-control" name="cc-number" id="cc-number" placeholder="">
@@ -198,7 +333,11 @@
                     <hr class="my-4">
 
 
+<<<<<<< Updated upstream
                     <a href="?module=users&action=editProfile">Edit</a>
+=======
+                    <a class="w-100 btn dark btn-lg" href="?module=users&action=editProfile">Edit</a>
+>>>>>>> Stashed changes
                 </form>
             </div>
         </div>

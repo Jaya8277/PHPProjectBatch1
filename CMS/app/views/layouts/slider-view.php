@@ -19,7 +19,11 @@
             <div class="carousel-caption">
                 <h1 class="h1-responsive">Education Needs<br>Complete Solution</h1>
                 <p>Teach A Class raises funds for solutions teachers need. All teachers are welcome to apply.</p>
+<<<<<<< Updated upstream
                 <p><a href="contact.html" class="btn btn-outline-success px-4 py-3 mt-3">Contact</a></p>
+=======
+                <p><a href="index.php?module=contact&action=contact" class="btn btn-outline-success px-4 py-3 mt-3">Contact</a></p>
+>>>>>>> Stashed changes
             </div>
         </div>
         <div class="carousel-item">
@@ -31,7 +35,11 @@
             <div class="carousel-caption">
                 <h1 class="h1-responsive">University, College <br>School Education</h1>
                 <p>Higher education is tertiary education leading to award of an academic degree.</p>
+<<<<<<< Updated upstream
                 <p><a href="contact.html" class="btn btn-outline-success px-4 py-3 mt-3">Contact</a></p>
+=======
+                <p><a href="index.php?module=contact&action=contact" class="btn btn-outline-success px-4 py-3 mt-3">Contact</a></p>
+>>>>>>> Stashed changes
             </div>
         </div>
 

@@ -23,11 +23,19 @@
                              style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
                             <h3 class="f-title f_600 t_color f_size_18">Menu</h3>
                             <ul class="list-unstyled f_list">
+<<<<<<< Updated upstream
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="studentcorner.html">StudentCorner</a></li>
                                 <li><a href="department.html">Department</a></li>
                                 <li><a href="place.html">Placement</a></li>
+=======
+                                <li><a href="?">Home</a></li>
+                                <li><a href="index.php?module=aboutus&action=details">About</a></li>
+                                <li><a href="index.php?module=studentcorner&action=details">StudentCorner</a></li>
+                                <li><a href="index.php?module=department&action=details">Department</a></li>
+                                <li><a href="index.php?module=placement&action=placement">Placement</a></li>
+>>>>>>> Stashed changes
 
                             </ul>
                         </div>
@@ -37,10 +45,17 @@
                              style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
                             <h3 class="f-title f_600 t_color f_size_18">Extra Menu</h3>
                             <ul class="list-unstyled f_list">
+<<<<<<< Updated upstream
                                 <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="login.html">Login</a></li>
                                 <li><a href="registration.html">Registration</a></li>
                                 <li><a href="contact.html">Contact</a></li>
+=======
+                                <li><a href="index.php?module=gallery&action=details">Gallery</a></li>
+                                <li><a href="index.php?module=users&action=login">Login</a></li>
+                                <li><a href="index.php?module=registration&action=details">Registration</a></li>
+                                <li><a href="index.php?module=contact&action=contact">Contact</a></li>
+>>>>>>> Stashed changes
                             </ul>
                         </div>
                     </div>

@@ -14,7 +14,11 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="blog-entry">
                     <a href="blog-single.html" class="block-20 d-flex align-items-end"
+<<<<<<< Updated upstream
                        style="background-image: url('img/image_1.jpg'); height: 250px;">
+=======
+                       style="background-image: url('assets/frontend/img/image_1.jpg'); height: 250px;">
+>>>>>>> Stashed changes
                         <div class="meta-date text-center p-2">
                             <span class="day">28</span>
                             <span class="mos">Sep</span>
@@ -39,7 +43,11 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="blog-entry">
                     <a href="blog-single.html" class="block-20 d-flex align-items-end"
+<<<<<<< Updated upstream
                        style="background-image: url('img/image_2.jpg'); height: 250px;">
+=======
+                       style="background-image: url('assets/frontend/img/image_2.jpg'); height: 250px;">
+>>>>>>> Stashed changes
                         <div class="meta-date text-center p-2">
                             <span class="day">28</span>
                             <span class="mos">Sep</span>
@@ -64,7 +72,11 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="blog-entry">
                     <a href="blog-single.html" class="block-20 d-flex align-items-end"
+<<<<<<< Updated upstream
                        style="background-image: url('img/image_3.jpg'); height: 250px;">
+=======
+                       style="background-image: url('assets/frontend/img/image_3.jpg'); height: 250px;">
+>>>>>>> Stashed changes
                         <div class="meta-date text-center p-2">
                             <span class="day">28</span>
                             <span class="mos">Sep</span>

@@ -20,8 +20,8 @@ function getDBConnection()
         die("Connection Failed: " . mysqli_connect_error());
     } else {
         return $conn;
-        // die("Connected");
-        // exit();
+         die("Connected");
+         exit();
     }
 }
 ?>
